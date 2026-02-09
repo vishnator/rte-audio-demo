@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grocery price inflation rises to 6.8% - Worldpanel by Numerator – RTÉ</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lora:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+  }
+
+  /* ═══════════════════════════════════════
+     TOP LEADERBOARD AD
+     ═══════════════════════════════════════ */
+  .leaderboard-ad {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .leaderboard-ad-inner {
+    width: 728px;
+    height: 90px;
+    background: linear-gradient(135deg, #004d1a, #00802b);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .leaderboard-ad-inner .ad-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #7CFC00;
+    margin-right: 30px;
+  }
+  .leaderboard-ad-inner .ad-text-lb {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-right: 24px;
+  }
+  .leaderboard-ad-inner .ad-shop-btn {
+    background: #e63946;
+    color: #fff;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* ═══════════════════════════════════════
+     HEADER / NAV
+     ═══════════════════════════════════════ */
+  .site-header {
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+  }
+
+  .header-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 30px;
+  }
+
+  .rte-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #1a1a1a;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .rte-logo svg { height: 28px; }
+
+  .rte-logo .divider {
+    width: 1px;
+    height: 22px;
+    background: #ccc;
+    margin: 0 4px;
+  }
+
+  .rte-logo .centenary {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #666;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    flex: 1;
+  }
+
+  .main-nav a {
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 4px 0;
+  }
+
+  .main-nav a.active {
+    font-weight: 700;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+
+  .weather-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .header-icon {
+    width: 22px;
+    height: 22px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  /* Sub nav */
+  .sub-nav-bar {
+    border-top: 4px solid #00a368;
+    background: #fff;
+  }
+
+  .sub-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .sub-nav a {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+  }
+
+  .sub-nav a:hover { text-decoration: underline; }
+
+  .breadcrumb {
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .breadcrumb::after {
+    content: '▸';
+    font-size: 11px;
+    color: #999;
+    margin-left: 2px;
+  }
+
+  /* ═══════════════════════════════════════
+     ARTICLE LAYOUT
+     ═══════════════════════════════════════ */
+  .article-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+  }
+
+  .article-main {
+    min-width: 0;
+  }
+
+  /* Heading */
+  .article-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  /* Meta row */
+  .article-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .article-date {
+    font-size: 13px;
+    color: #888;
+  }
+
+  .share-icons {
+    display: flex;
+    gap: 6px;
+  }
+
+  .share-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .share-fb { background: #1877F2; }
+  .share-x { background: #000; }
+  .share-li { background: #0A66C2; }
+  .share-em { background: #888; }
+  .share-pr { background: #bbb; }
+
+  /* Hero image */
+  .hero-image-wrap {
+    margin-bottom: 8px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #e8d5b7, #c4a97d);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-image .img-placeholder {
+    width: 100%;
+    height: 100%;
+    background:
+      linear-gradient(135deg, #f5e6cc 0%, #d4b896 40%, #a2c4a5 70%, #8fb88f 100%);
+    position: relative;
+  }
+
+  .hero-image .img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 45% 50%, rgba(255,255,255,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 60% 40%, rgba(200,170,120,0.4) 0%, transparent 50%);
+  }
+
+  /* Placeholder hand/receipt illustration */
+  .receipt-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 160px;
+    opacity: 0.25;
+  }
+
+  .hero-caption {
+    font-size: 12px;
+    color: #888;
+    padding: 6px 0;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  /* ═══════════════════════════════════════
+     AUDIO + AD MODULE
+     ═══════════════════════════════════════ */
+  .audio-ad-module {
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    margin-bottom: 24px;
+  }
+
+  /* Left: Audio Player */
+  .audio-section {
+    flex: 1;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  .audio-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .audio-label span {
+    font-weight: 400;
+    color: #555;
+  }
+
+  .player-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .play-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: #3366ff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 2px 6px rgba(51,102,255,0.3);
+  }
+
+  .play-btn:hover { background: #2952cc; transform: scale(1.06); }
+  .play-btn:active { transform: scale(0.97); }
+  .play-btn svg { width: 17px; height: 17px; fill: #fff; }
+  .play-btn .pause-icon { display: none; }
+  .play-btn.playing .play-icon { display: none; }
+  .play-btn.playing .pause-icon { display: block; }
+
+  .waveform-container { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+
+  .waveform {
+    display: flex;
+    align-items: center;
+    gap: 1.5px;
+    height: 34px;
+    cursor: pointer;
+  }
+
+  .waveform .bar {
+    flex: 1;
+    background: #c8c8c8;
+    border-radius: 1px;
+    min-width: 2px;
+    transition: background 0.15s;
+  }
+
+  .waveform .bar.active { background: #3366ff; }
+
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #999;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .audio-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 7px;
+    font-size: 11px;
+    color: #aaa;
+  }
+  .audio-branding svg { width: 10px; height: 12px; fill: #aaa; }
+
+  /* Right: Ad */
+  .ad-section-inline {
+    width: 332px;
+    min-width: 332px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 6px;
+    background: #fafafa;
+  }
+
+  .ad-label-sm {
+    font-size: 9px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+    align-self: flex-end;
+  }
+
+  .ad-banner-netflix {
+    width: 320px;
+    height: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+
+  .ad-banner-netflix:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+
+  .ad-poster-side {
+    width: 108px;
+    height: 100px;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    padding: 2px;
+  }
+
+  .poster-cell {
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .ad-content-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 14px;
+    gap: 6px;
+  }
+
+  .netflix-n {
+    font-size: 20px;
+    font-weight: 900;
+    color: #e50914;
+    letter-spacing: -1px;
+    font-family: Arial, sans-serif;
+  }
+
+  .ad-tagline {
+    font-size: 11.5px;
+    color: #e5e5e5;
+    line-height: 1.3;
+  }
+
+  .ad-cta {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+
+  .ad-cta:hover { background: #f6121d; }
+
+  /* ═══════════════════════════════════════
+     ARTICLE BODY
+     ═══════════════════════════════════════ */
+  .article-body p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #222;
+    margin-bottom: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ═══════════════════════════════════════
+     RIGHT SIDEBAR
+     ═══════════════════════════════════════ */
+  .sidebar {
+    padding-top: 4px;
+  }
+
+  .sidebar-ad {
+    width: 300px;
+    position: sticky;
+    top: 20px;
+  }
+
+  .sidebar-ad-label {
+    font-size: 9px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: right;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3px;
+  }
+
+  .sidebar-ad-label svg { width: 10px; height: 10px; fill: #0a0; }
+
+  .sidebar-ad-box {
+    width: 300px;
+    height: 480px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .adobe-logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e01b22;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+  .adobe-sub {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 14px;
+  }
+
+  .adobe-headline {
+    font-size: 30px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .adobe-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  .adobe-cta {
+    background: #1473e6;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .adobe-illustration {
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(135deg, #f7d794, #82ccdd, #b8e994, #f8a5c2);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .adobe-illustration::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 60%, #f6b93b 0%, transparent 40%),
+      radial-gradient(circle at 70% 40%, #38ada9 0%, transparent 40%);
+    opacity: 0.5;
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════ */
+  @media (max-width: 960px) {
+    .article-layout {
+      grid-template-columns: 1fr;
+    }
+    .sidebar { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .audio-ad-module {
+      flex-direction: column;
+    }
+    .audio-section {
+      border-right: none;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .ad-section-inline {
+      width: 100%;
+      min-width: unset;
+      padding: 8px;
+    }
+    .ad-banner-netflix {
+      margin: 0 auto;
+    }
+    .article-heading { font-size: 24px; }
+    .leaderboard-ad { display: none; }
+    .header-main { padding: 10px 14px; gap: 14px; }
+    .main-nav { gap: 12px; }
+    .main-nav a { font-size: 13px; }
+  }
+
+  @media (max-width: 500px) {
+    .main-nav a:nth-child(n+5) { display: none; }
+    .header-right .weather-badge { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP AD ═══ -->
+<div class="leaderboard-ad">
+  <div class="leaderboard-ad-inner">
+    <div class="ad-brand">zoro.com</div>
+    <div class="ad-text-lb">Stock up on painting<br>essentials for every space.</div>
+    <button class="ad-shop-btn">Shop Now</button>
+  </div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="#" class="rte-logo">
+      <svg viewBox="0 0 120 32" fill="none">
+        <text x="0" y="24" font-family="Arial" font-weight="900" font-size="28" fill="#1a1a1a">RTÉ</text>
+      </svg>
+      <div class="divider"></div>
+      <span class="centenary">100</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#">News</a>
+      <a href="#">Sport</a>
+      <a href="#">Entertainment</a>
+      <a href="#" class="active">Business</a>
+      <a href="#">Lifestyle</a>
+      <a href="#">Culture</a>
+      <a href="#">Gaeilge</a>
+      <a href="#">Player</a>
+      <a href="#">TV</a>
+      <a href="#">Radio</a>
+    </nav>
+    <div class="header-right">
+      <span class="weather-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+        8°C
+      </span>
+      <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ SUB NAV ═══ -->
+<div class="sub-nav-bar">
+  <div class="sub-nav">
+    <a href="#" class="breadcrumb">News</a>
+    <a href="#" class="breadcrumb">Business</a>
+    <a href="#">Agribusiness</a>
+    <a href="#">Focus On Inflation</a>
+    <a href="#">Business Of Climate</a>
+    <a href="#">Work</a>
+    <a href="#">Brexit</a>
+    <a href="#">Watch And Listen</a>
+    <a href="#">Your Money</a>
+    <a href="#">Technology</a>
+    <a href="#">Markets</a>
+    <a href="#">Economy</a>
+    <a href="#">Analysis</a>
+  </div>
+</div>
+
+<!-- ═══ ARTICLE + SIDEBAR ═══ -->
+<div class="article-layout">
+
+  <!-- MAIN ARTICLE -->
+  <article class="article-main">
+    <h1 class="article-heading">Grocery price inflation rises to 6.8% - Worldpanel by Numerator</h1>
+
+    <div class="article-meta">
+      <span class="article-date">Updated / Monday, 9 Feb 2026 14:13</span>
+      <div class="share-icons">
+        <button class="share-btn share-fb" aria-label="Facebook">f</button>
+        <button class="share-btn share-x" aria-label="X">𝕏</button>
+        <button class="share-btn share-li" aria-label="LinkedIn">in</button>
+        <button class="share-btn share-em" aria-label="Email">✉</button>
+        <button class="share-btn share-pr" aria-label="Print">⎙</button>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image-wrap">
+      <div class="hero-image">
+        <div class="img-placeholder">
+          <svg class="receipt-icon" viewBox="0 0 100 140" fill="none">
+            <rect x="20" y="10" width="60" height="120" rx="3" fill="rgba(255,255,255,0.5)" stroke="rgba(0,0,0,0.1)"/>
+            <line x1="30" y1="30" x2="70" y2="30" stroke="rgba(0,0,0,0.12)" stroke-width="2"/>
+            <line x1="30" y1="42" x2="65" y2="42" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+            <line x1="30" y1="54" x2="60" y2="54" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+            <line x1="30" y1="66" x2="68" y2="66" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+            <line x1="30" y1="78" x2="55" y2="78" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+            <line x1="30" y1="96" x2="70" y2="96" stroke="rgba(0,0,0,0.12)" stroke-width="2.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p class="hero-caption">Grocery sales in Ireland rose by 5% in the four-week period to 25 January, with shoppers spending €1.2 billion</p>
+
+    <!-- ═══ AUDIO + AD MODULE ═══ -->
+    <div class="audio-ad-module">
+      <div class="audio-section">
+        <div class="audio-label"><strong>Listen</strong> <span>to audio version of this article</span></div>
+        <div class="player-row">
+          <button class="play-btn" id="playBtn" aria-label="Play audio">
+            <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+          </button>
+          <div class="waveform-container">
+            <div class="waveform" id="waveform"></div>
+            <div class="time-row">
+              <span id="currentTime">0:00</span>
+              <span id="totalTime">4:32</span>
+            </div>
+          </div>
+        </div>
+        <div class="audio-branding">
+          <svg viewBox="0 0 10 14"><rect x="1" y="0" width="2.5" height="14" rx="1"/><rect x="6" y="3" width="2.5" height="8" rx="1"/></svg>
+          Instaread
+        </div>
+      </div>
+
+      <div class="ad-section-inline">
+        <div class="ad-label-sm">Advertisement</div>
+        <div class="ad-banner-netflix" onclick="void(0)">
+          <div class="ad-poster-side">
+            <div class="poster-cell" style="background:#1a1a2e;"></div>
+            <div class="poster-cell" style="background:#0f3460;"></div>
+            <div class="poster-cell" style="background:#2d132c;"></div>
+            <div class="poster-cell" style="background:#1b1b2f;"></div>
+          </div>
+          <div class="ad-content-side">
+            <div class="netflix-n">NETFLIX</div>
+            <div class="ad-tagline">Stream the stories<br>everyone's talking about</div>
+            <button class="ad-cta">Watch Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+      <p>New figures show that grocery price inflation is continued to rise.</p>
+      <p>The data from Worldpanel by Numerator shows the rate increased from 6.25% to 6.82% over the 12 weeks to 25 January.</p>
+      <p>Grocery sales in Ireland rose by 5% in the four-week period to 25 January, with shoppers spending €1.2 billion on everyday essentials.</p>
+      <p>According to the latest figures, Dunnes Stores maintained its position as Ireland's leading grocery retailer, capturing 24.6% of the market share during the 12-week period.</p>
+    </div>
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-ad">
+      <div class="sidebar-ad-label">
+        <svg viewBox="0 0 16 16"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5z"/></svg>
+        Advertisement
+      </div>
+      <div class="sidebar-ad-box">
+        <div class="adobe-logo">Adobe</div>
+        <div class="adobe-sub">Creative Cloud Pro</div>
+        <div class="adobe-headline">All creating,<br>no braking.</div>
+        <div class="adobe-desc">Keep your creativity moving with the power of Photoshop, After Effects, and more.</div>
+        <button class="adobe-cta">Try now</button>
+        <div class="adobe-illustration"></div>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<script>
+  // Waveform generation
+  const waveform = document.getElementById('waveform');
+  const barCount = 55;
+  for (let i = 0; i < barCount; i++) {
+    const t = i / barCount;
+    const envelope = Math.exp(-Math.pow((t - 0.45) * 3, 2));
+    const noise = 0.3 + 0.7 * Math.random();
+    const h = Math.max(10, Math.min(100, envelope * noise * 100));
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.height = h + '%';
+    waveform.appendChild(bar);
+  }
+
+  // Player logic
+  const totalDuration = 272;
+  let currentTime = 0;
+  let isPlaying = false;
+  let interval = null;
+  const playBtn = document.getElementById('playBtn');
+  const currentTimeEl = document.getElementById('currentTime');
+  const bars = waveform.querySelectorAll('.bar');
+
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function updateBars() {
+    const progress = currentTime / totalDuration;
+    bars.forEach((bar, i) => {
+      bar.classList.toggle('active', i / bars.length <= progress);
+    });
+    currentTimeEl.textContent = formatTime(currentTime);
+  }
+
+  playBtn.addEventListener('click', () => {
+    isPlaying = !isPlaying;
+    playBtn.classList.toggle('playing', isPlaying);
+    if (isPlaying) {
+      interval = setInterval(() => {
+        currentTime += 1;
+        if (currentTime >= totalDuration) {
+          currentTime = 0;
+          isPlaying = false;
+          playBtn.classList.remove('playing');
+          clearInterval(interval);
+        }
+        updateBars();
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+  });
+
+  waveform.addEventListener('click', (e) => {
+    const rect = waveform.getBoundingClientRect();
+    currentTime = Math.floor(((e.clientX - rect.left) / rect.width) * totalDuration);
+    updateBars();
+  });
+
+  updateBars();
+</script>
+</body>
+</html>
